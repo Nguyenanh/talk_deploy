@@ -31,6 +31,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'unicorn'
+gem 'capistrano', '~> 3.3.5'
+  gem 'capistrano-rails', '~> 1.1.0' #Run các task trong Rails.
+  gem 'capistrano-bundler' #Run bundle sau khi deploy.
+  gem 'capistrano-unicorn-nginx', '~> 3.2.0' #Cấu hình tự động unicorn và nginx.
+  gem 'capistrano-rvm' #Hỗ trợ một số task liên quan tới rvm.
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
